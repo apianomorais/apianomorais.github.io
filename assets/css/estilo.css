@@ -161,9 +161,11 @@ a:hover{color:var(--laranja)}
 }
 .cartao .ementa{margin-top:.55rem;font-size:.86rem}
 
-/* ------------------------------------------------------- pesquisa */
+/* --------------------------------------- pesquisa e divulgação */
 .pesquisa .cartao{border-left:4px solid var(--verde)}
 .pesquisa .etiqueta{color:#1f5248;background:#eef5f3;border-color:#bcd7d1}
+.divulgacao .cartao{border-left:4px solid #6b4e8f}
+.divulgacao .etiqueta{color:#53407a;background:#f1edf7;border-color:#cfc2e2}
 
 /* -------------------------------------------------------- rodapé */
 .rodape{
