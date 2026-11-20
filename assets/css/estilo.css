@@ -1,0 +1,188 @@
+/* ===================================================================
+   Portal do Prof. Apiano Morais - LFCA/URCA
+   Mesma paleta grafite e cobre dos sites de disciplina.
+   =================================================================== */
+@font-face{
+  font-family:'Audiowide';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('../fontes/audiowide-latin-ext-400-normal.woff2') format('woff2');
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+@font-face{
+  font-family:'Audiowide';
+  font-style:normal;
+  font-weight:400;
+  font-display:swap;
+  src:url('../fontes/audiowide-latin-400-normal.woff2') format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+:root{
+  --azul:#2b3240;
+  --azul-claro:#4f5a6b;
+  --azul-pastel:#edf0f4;
+  --tinta:#1b1f24;
+  --tinta-suave:#4a5560;
+  --papel:#ffffff;
+  --papel-alt:#f7f8fa;
+  --borda:#dde2e8;
+  --laranja:#b05a1f;
+  --laranja-texto:#894618;
+  --acento-leve:#faf5f2;
+  --acento-borda:#e1c0aa;
+  --verde:#2c6e63;
+  --raio:10px;
+  --sombra:0 1px 3px rgba(43,50,64,.10), 0 6px 20px rgba(43,50,64,.06);
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --display:"Audiowide",system-ui,sans-serif;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:var(--papel-alt);
+  color:var(--tinta);
+  font-family:var(--serif);
+  font-size:18px;
+  line-height:1.65;
+}
+
+/* ------------------------------------------------------------- topo */
+.topo{
+  background:var(--azul);
+  color:#fff;
+  border-bottom:3px solid var(--laranja);
+}
+.faixa{
+  max-width:62rem;
+  margin:0 auto;
+  padding:2.6rem 1.25rem 2.2rem;
+  display:flex;
+  gap:1.6rem;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.faixa img{height:96px;width:auto;flex:none}
+.faixa h1{
+  font-family:var(--display);
+  font-size:1.5rem;
+  line-height:1.3;
+  margin:0 0 .35rem;
+  font-weight:400;
+  letter-spacing:.01em;
+}
+.faixa p{margin:.2rem 0;font-size:.98rem;color:#dbe1ea}
+.faixa a{color:#f0cdb4}
+.faixa a:hover{color:#fff}
+
+/* ---------------------------------------------------------- miolo */
+main{max-width:62rem;margin:0 auto;padding:2.2rem 1.25rem 3rem}
+
+.abertura{
+  background:var(--papel);
+  border:1px solid var(--borda);
+  border-left:4px solid var(--laranja);
+  border-radius:var(--raio);
+  padding:1.1rem 1.35rem;
+  box-shadow:var(--sombra);
+  margin:0 0 2.4rem;
+}
+.abertura p{margin:.5rem 0}
+.abertura p:first-child{margin-top:0}
+.abertura p:last-child{margin-bottom:0}
+
+h2{
+  font-family:var(--sans);
+  font-size:1.12rem;
+  letter-spacing:.02em;
+  text-transform:uppercase;
+  color:var(--laranja-texto);
+  border-bottom:2px solid var(--acento-borda);
+  padding-bottom:.4rem;
+  margin:2.6rem 0 1.2rem;
+}
+h2:first-of-type{margin-top:0}
+
+a{color:var(--laranja-texto)}
+a:hover{color:var(--laranja)}
+
+/* --------------------------------------------------------- cartões */
+.cartoes{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(16.5rem,1fr));
+  gap:1rem;
+}
+.cartao{
+  background:var(--papel);
+  border:1px solid var(--borda);
+  border-radius:var(--raio);
+  padding:1.05rem 1.15rem 1.15rem;
+  box-shadow:var(--sombra);
+  display:flex;
+  flex-direction:column;
+  transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.cartao:hover{
+  transform:translateY(-2px);
+  border-color:var(--acento-borda);
+  box-shadow:0 2px 6px rgba(43,50,64,.12), 0 10px 28px rgba(43,50,64,.10);
+}
+.cartao h3{
+  font-family:var(--sans);
+  font-size:1.02rem;
+  margin:0 0 .15rem;
+  line-height:1.35;
+}
+.cartao h3 a{text-decoration:none}
+.cartao h3 a:hover{text-decoration:underline}
+.etiqueta{
+  display:inline-block;
+  align-self:flex-start;
+  font-family:var(--sans);
+  font-size:.7rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--laranja-texto);
+  background:var(--acento-leve);
+  border:1px solid var(--acento-borda);
+  border-radius:999px;
+  padding:.1rem .5rem;
+  margin:.35rem 0 .5rem;
+}
+.cartao p{
+  margin:0;
+  font-size:.92rem;
+  line-height:1.55;
+  color:var(--tinta-suave);
+}
+.cartao .ementa{margin-top:.55rem;font-size:.86rem}
+
+/* ------------------------------------------------------- pesquisa */
+.pesquisa .cartao{border-left:4px solid var(--verde)}
+.pesquisa .etiqueta{color:#1f5248;background:#eef5f3;border-color:#bcd7d1}
+
+/* -------------------------------------------------------- rodapé */
+.rodape{
+  background:var(--azul);
+  color:#dbe1ea;
+  border-top:3px solid var(--laranja);
+  font-family:var(--sans);
+  font-size:.9rem;
+}
+.rodape .faixa{padding:1.6rem 1.25rem;align-items:flex-start}
+.rodape img{height:64px}
+.rodape p{margin:.25rem 0}
+.rodape a{color:#f0cdb4}
+.rodape a:hover{color:#fff}
+
+@media (max-width:620px){
+  body{font-size:17px}
+  .faixa{padding:2rem 1rem 1.7rem;gap:1.1rem}
+  .faixa img{height:72px}
+  .faixa h1{font-size:1.25rem}
+  main{padding:1.6rem 1rem 2.4rem}
+}
